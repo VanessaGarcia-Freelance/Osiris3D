@@ -28,6 +28,7 @@
 <div class="main-content">
 
   <div class="application-wrapper">
+    
     <!-- folder icons -->
     <div class="folder-icons">
       <a href="#" class="folder-link">
@@ -45,7 +46,7 @@
     </div>
 
     <!-- loader -->
-    <div class="loading-module">
+    <div class="loading-module module-box">
       <div class="load-bar-container">
         LOAD BAR GOES HERE
         <p>Loading...</p>
@@ -54,7 +55,7 @@
 
     <!-- viewer -->
     <div class="view-module-wrapper">
-      <div class="view-module">
+      <div class="view-module module-box">
         <div class="scroll-content">
           <img src="images/skull-images.png" />
           <img src="images/skull-images.png" />
@@ -66,23 +67,136 @@
       </div>
     </div>
 
-    <!-- Compiled View -->
+    <!-- compiled view -->
     <div class="compiled-module-wrapper">
-      <div class="compiled-module">
-        <div class="scroll-content">
-          <img src="images/skull-images.png" />
-          <img src="images/skull-images.png" />
+      <div class="compiled-module module-box">
+        <div class="skulls">
+          <img src="images/3d-skulls-placeholder.png" />
         </div>
-        <a href="#" class="compile-link">
-          <img src="images/3d-icon.png" />
-          <p>Compile 3D</p>
-        </a>
+        <div class="tools">
+          <a href="#" class="active">
+            <img src="images/rotate-button.png" />
+            <p>Rotate</p>
+          </a>
+          <a href="#" class="">
+            <img src="images/select-button.png" />
+            <p>Select</p>
+          </a>
+          <a href="#" class="">
+            <img src="images/cut-button.png" />
+            <p>Cut</p>
+          </a>
+          <a href="#" class="blue create">
+            <img src="images/create-izi.png" />
+            <p>Create<br/>IZI</p>
+          </a>
+        </div>
       </div>
     </div>
+
+    <!-- fracture view -->
+    <div class="create-module-wrapper">
+      <div class="create-module module-box">
+        <div class="fracture">
+          <img src="images/fracture-placeholder.png" />
+        </div>
+        <div class="tools">
+          <a href="#" class="active">
+            <img src="images/rotate-button.png" />
+            <p>Rotate</p>
+          </a>
+          <a href="#" class="">
+            <img src="images/select-button.png" />
+            <p>Select</p>
+          </a>
+          <a href="#" class="">
+            <img src="images/cut-button.png" />
+            <p>Cut</p>
+          </a>
+          <a href="#" class="blue">
+            <img src="images/save-button.png" />
+            <p>Save</p>
+          </a>
+          <a href="#" class="blue print">
+            <img src="images/print-izi.png" />
+            <p>Print <br/> IZI</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Printing Steps Module -->
+    <div class ="print-steps-wrapper">
+      <div class="print-steps  module-box">
+        <div class="steps-list">
+          <ul>
+            <li class="print active">Print</li>
+            <li class="scan blue">Scan</li>
+            <li class="verify blue">Verify</li>
+            <li class="sterilize">Sterilize</li>
+            <li class="ready blue">Ready!</li>
+          </ul>
+        </div>
+        <div class="steps-modules">
+            <div class="print-dropdown active module">
+              <h2>Select a printer</h2>
+              <select>
+                <option selected>Select Device</option>
+                <option>Titanium</option>
+                <option>PLA Printer</option>
+              </select>
+              <button class="orange">Print</button>
+            </div>
+            <div class="printing module">
+                Print Animation
+            </div>
+            <div class="print-complete module">
+              <div class="circle-check orange"></div>
+              <h2>Complete!</h2>
+              <p>Please move print job to scanner</p>
+              <button class="grey">OK</button>
+            </div>
+            <div class="scanning module">
+              Scan Animation
+            </div>
+            <div class="verifing module">
+              Verify Animation
+            </div>
+            <div class="verify-complete module">
+              <div class="circle-check blue"></div>
+              <h2>Job Verified!</h2>
+              <p>Please move print job to autoclave</p>
+              <button class="grey">OK</button>
+            </div>
+            <div class="sterilizing module">
+              Sterilizing Animation
+            </div>
+            <div class="ready module">
+              <div class="box">
+                <h2>InstaImplantz ready to go!</h2>
+                <div class="circle-check green"></div>
+              </div>
+              <div class="buttons">
+                <a href="#">
+                  <img src="images/main-screen.png" />
+                  <p>Go to main screen</p>
+                </a>
+                <a href="#">
+                  <img src="images/modify-icon.png" />
+                  <p>Modify implant</p>
+                </a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </div>
 
-<!--   <script src="js/functions.js"></script> -->
+  <script src="js/jquery-1.12.2.min.js"></script>
+  <script src="js/functions.js"></script>
 </body>
 </html>

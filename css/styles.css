@@ -8,13 +8,20 @@ a {
     text-decoration: none;
 }
 
+a > p {
+    font-size: 9px;
+}
+p {
+    font-size: 10px;
+}
+
 header {
     background: url(../images/header-bar.jpg) no-repeat;
 }
 .logo {
     padding: 20px;
     display: block;
-    flaot: left;
+    // flaot: left;
 }
 
 nav {
@@ -31,15 +38,116 @@ nav a {
 }
 
 .main-content {
-    background: url('../images/main-background.png') center center no-repeat;
+    // background: url('../images/main-background.png') center center no-repeat;
     width: 936px;
     height: 539px;
     margin: 75px auto;
 }
 
+/* Module Box */
+    .module-box {
+        background-color: white;
+        -webkit-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.18);
+        -moz-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.18);
+        box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.18);
+        border-radius: 5px;
+        //border: 1px solid #BFBFBF;
+    }
+/* *** */
+
+
+/* Tools */
+    .tools a img {
+        border: 1px solid transparent;
+    }
+    .tools a:hover p, .tools a.active p {
+        opacity: 1;
+    }
+    .tools a:hover img, .tools a.active img {
+        border: 1px solid #F4AB2C;
+    }
+    .tools a.blue:hover img, .tools a.blue.active img {
+        border: 1px solid #4A90E2;
+    }
+    .tools a p {
+        text-align: center;
+        opacity: .5;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+/* *** */
+
+/* Headers */
+    h2 {
+        font-size: 12px;
+    }
+/* *** */
+
+/* Buttons */
+    button {
+        display: block;
+        border: none;
+        border-radius: 0;
+        padding: 0 28px;
+        line-height: 25px;
+        font-size: 11px;
+        color: white;
+        margin: 15px auto 0 auto;
+        cursor: pointer;
+    }
+    button.orange {
+        background-color: #F4AB2C;
+    }
+    button.grey {
+        background-color: #ACBACB;
+    }
+
+
+    .circle-check {
+        border-radius: 50%;
+        width: 63px;
+        height: 63px;
+        border: 10px solid #EFEDED;
+        background-color: grey;
+        margin: 0 auto;
+    }
+    .circle-check:after {
+        content: url("../images/white-big-check.png");
+        widht: 31px;
+        height: 31px;
+        position: relative;
+        top: 16px;
+        left: 1px;
+    }
+    .circle-check.orange {
+        background-color: #F4AB2C;
+    }
+    .circle-check.blue {
+        background-color: #4A90E2;
+    }
+    .circle-check.green {
+        background-color: #B8E986;
+        width: 24px;
+        height: 24px;
+    }
+    .circle-check.green:after {
+        content: '';
+        display: block;
+        background: url("../images/white-big-check.png") center no-repeat;
+        background-size: contain;
+        width: 10px;
+        height: 10px;
+        top: 7px;
+        left: 7px;
+    }
+
+/* *** */
+
+
 .application-wrapper {
     width: 100%;
     height: 579px;
+    background: url('../images/main-background.png') center center no-repeat;
     background-color: #F5F5F5;
     position: relative;
     overflow: auto;
@@ -75,20 +183,15 @@ nav a {
             color: white;
         }
 
-
     .loading-module {
+        display: none;
         width: 547px;
         height: 359px;
-        // margin: 0px auto 0 auto;
         margin: 107px auto 0 auto;
-        background: white;
-        -webkit-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.18);
-        -moz-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.18);
-        box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.18);
         background: url('../images/main-background.png') center 46px white no-repeat;
         background-size: 362px;
         position: relative;
-        border-radius: 2px;
+        border: 1px solid #BFBFBF;
     }
 
         .loading-module .load-bar-container {
@@ -103,14 +206,13 @@ nav a {
             margin: 0;
         }
 
-
-    .view-module-wrapper, .compiled-module-wrapper {
-        // width: 0 auto;
+/* View Module */ 
+    .view-module-wrapper, .compiled-module-wrapper, .create-module-wrapper, .print-steps-wrapper {
         position: absolute;
         top: 35px;
         height: 500px;
         width: 100%;
-        
+        display: none;
     }
         .view-module {
             width: 805px;
@@ -120,7 +222,6 @@ nav a {
             overflow: auto;
             position: relative;
         }
-
             .scroll-content {
                 width: 745px;
                 height: 330px;
@@ -153,11 +254,176 @@ nav a {
                 margin-bottom: 0;
             }
     
+/* Compiled Module (3D Skull Rotator) */
+    .compiled-module-wrapper {
+        z-index: 10;
+    }
+    .compiled-module {
+        width: 805px;
+        height: 500px;
+        margin: 0 auto;
+        background:  url('../images/compiled-view.png') center no-repeat;
+        overflow: auto;
+        position: relative;
+    }
+
+    .compiled-module .skulls {
+        position: absolute;
+        bottom: 20px;
+        left: 150px;
+    }
+
+    .compiled-module .tools {
+        position: absolute;
+        right: 20px;
+        top: 110px;
+    }
+
+    .compiled-module .tools a p {
+        color: white;
+    }
+
+/* Create Module */
+
+    .create-module-wrapper {
+        z-index: 15;
+    }
+        .create-module {
+            width: 805px;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            background:  url('../images/create-view.png') center top no-repeat;
+        }
+        .create-module .fracture {
+            position: absolute;
+            top: 158px;
+            left: 160px;
+        }
+        .create-module .tools {
+            position: absolute;
+            right: 283px;
+            top: 140px;
+        }
+
+        .create-module .tools a p {
+            color: #4A4A4A;
+        }
 
 
+/* Printing Steps */
+    .print-steps-wrapper {
+        z-index: 20;
+        top: 184px;
+        height: 216px;
+    }
+    .print-steps {
+        width: 328px;
+        height: 216px;
+        background-color: #FBFBFB;
+        border: 1px solid #BFBFBF;
+        margin: 0 auto;
+        position: relative;
 
+    }
+    .steps-list {
+        width: 90px;
+        border-right: 1px solid #EFEDED;
+        position: absolute;
+        height: 100%;
+        
+    } 
+    .steps-list ul {
+        position: relative;
+        top: 40px;
+        margin: 0 auto;
+        left: -4px;
+    } 
+    .steps-list li {
+        color: #CECECE;
+        font-size: 9px;
+        line-height: 25px;
+        list-style-type: none;
+    } 
+    .steps-list li:before {
+      /* For a round bullet */
+      content: '\2022';
+      display: block;
+      position: relative;
+      max-width: 0;
+      max-height: 0;
+      left: -15px;
+      top: 0;
+      color: #B3C9DC;
+      font-size: 25px;
+    }
+    .steps-list li.active {
+        color: #4A4A4A;
+    }
+    .steps-list li.active:before {
+        color: #F4AB2C;
+    }
+    .steps-list li.done {
+        color: #4A4A4A;
+    }
+    .steps-list li.done:before {
+        color: #F4AB2C;
+        content: '\2713';
+        font-size: 12px;
 
+    }
 
+    .steps-list li.blue.active:before {
+        color: #6EB4DB;
+    }
+    .steps-list li.blue.done:before {
+        color: #6EB4DB;
+    }
+
+    .steps-modules {
+        position: absolute;
+        right: 0;
+        width: 237px;
+        height: 100%;
+    }
+
+    .steps-modules .module {
+        position: absolute;
+        top: 0;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        margin: 20px;
+        text-align: center;
+        display: none;
+    }
+    .steps-modules .module.active {
+        display: block;
+    }
+
+    .print-dropdown h2 {
+        margin-top: 40px;
+    }
+    .print-dropdown select {
+        width: 184px;
+    }
+
+    .ready .box {
+        padding: 20px;
+        background-color: #EFEDED;
+    }
+    .ready .buttons {
+        margin-top: 10px;
+    }
+
+    .ready .buttons a p {
+        color: #929295;
+    }
+    .ready .buttons a:first-child {
+        float: left;
+    }
+    .ready .buttons a:last-child {
+        float: right;
+    }
 
 
 
