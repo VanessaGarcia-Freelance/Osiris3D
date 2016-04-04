@@ -34,17 +34,6 @@
         evt.preventDefault();
         //$(".view-module-wrapper").hide(); 
         $(".compiled-module-wrapper").show(); 
-        //$( ".slider" ).slider();
-        $(".slider" ).slider({
-            range: "min",
-            min: 0,
-            max: 360,
-            animate: true,
-            slide: function(event, ui) {
-                $(".rotate-one .value").html(ui.value);
-            }
-        });
-        $(".rotate-one .value").html($(".slider").slider("value"));
     });
 
     $(".compiled-module .create").click(function(evt) {
