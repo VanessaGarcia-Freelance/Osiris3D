@@ -201,10 +201,17 @@ nav a {
             width: 100%;
             color: #F5A623;
         }
-        .loading-module .load-bar-container p {
-            text-align: center;
-            margin: 0;
-        }
+            .loading-module .load-bar-container .progress-container {
+                width: 194px;
+                margin: 0 auto;
+            }
+            #progressbar {
+                margin-bottom: 5px;
+            }
+            .loading-module .load-bar-container p {
+                text-align: center;
+                margin: 0;
+            }
 
 /* View Module */ 
     .view-module-wrapper, .compiled-module-wrapper, .create-module-wrapper, .print-steps-wrapper {
@@ -244,7 +251,7 @@ nav a {
         .compile-link {
             position: absolute;
             bottom: 20px;
-            right: 34px;
+            right: 41px;
             font-size: 11px;
             color: #4A90E2;
             text-align: center;
@@ -252,6 +259,7 @@ nav a {
             .compile-link p {
                 margin-top: 7px;
                 margin-bottom: 0;
+                font-size: 11px;
             }
     
 /* Compiled Module (3D Skull Rotator) */
@@ -269,7 +277,7 @@ nav a {
 
     .compiled-module .skulls {
         position: absolute;
-        bottom: 20px;
+        top: 110px;
         left: 150px;
     }
 

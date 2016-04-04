@@ -9,6 +9,7 @@
   <meta name="author" content="SitePoint">
 
   <link rel="stylesheet" href="css/styles.css">
+  <link href="css/jquery-ui.css" rel="stylesheet">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,8 +49,10 @@
     <!-- loader -->
     <div class="loading-module module-box">
       <div class="load-bar-container">
-        LOAD BAR GOES HERE
-        <p>Loading...</p>
+        <div class="progress-container">
+          <div id="progressbar"></div>
+          <p>Loading...</p>
+        </div>
       </div>
     </div>
 
@@ -72,6 +75,13 @@
       <div class="compiled-module module-box">
         <div class="skulls">
           <img src="images/3d-skulls-placeholder.png" />
+          <div class="rotator rotate-one">
+            <div class="value"></div>
+            <div class="slider">
+
+            </div>
+
+          </div>
         </div>
         <div class="tools">
           <a href="#" class="active">
@@ -197,6 +207,7 @@
 </div>
 
   <script src="js/jquery-1.12.2.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script src="js/functions.js"></script>
 </body>
 </html>

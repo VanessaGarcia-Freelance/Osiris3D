@@ -1,0 +1,362 @@
+tutorialspoint
+
+Search your tutorials...
+ 
+  Whiteboard
+  Net Meeting
+  Shared
+  Careers
+  Current Affairs
+ HOME
+TUTORIALS LIBRARY 
+ CODING GROUND
+ SEND18
+ CONVERSION
+DEV TOOLS
+JqueryUI Tutorial
+JqueryUI Tutorial
+JqueryUI - Home
+JqueryUI - Overview
+JqueryUI - Environment Setup
+JqueryUI Interactions
+JqueryUI - Draggable
+JqueryUI - Droppable
+JqueryUI - Resizable
+JqueryUI - Selectable
+JqueryUI - Sortable
+JqueryUI Widgets
+JqueryUI - Accordion
+JqueryUI - Autocomplete
+JqueryUI - Button
+JqueryUI - Datepicker
+JqueryUI - Dialog
+JqueryUI - Menu
+JqueryUI - Progressbar
+JqueryUI - Slider
+JqueryUI - Spinner
+JqueryUI - Tabs
+JqueryUI - Tooltip
+JqueryUI Effects
+JqueryUI - Add Class
+JqueryUI - Color Animation
+JqueryUI - Effect
+JqueryUI - Hide
+JqueryUI - Remove Class
+JqueryUI - Show
+JqueryUI - Switch Class
+JqueryUI - Toggle
+JqueryUI - Toggle Class
+JqueryUI Utilities
+JqueryUI - Position
+JqueryUI - Widget Factory
+JqueryUI Useful Resources
+JqueryUI - Quick Guide
+JqueryUI - Useful Resources
+JqueryUI - Discussion
+Selected Reading
+Developer's Best Practices
+Questions and Answers
+Effective Resume Writing
+HR Interview Questions
+Computer Glossary
+Who is Who
+JqueryUI - Progressbar
+Advertisements
+ Previous Page Next Page  
+Progress bars indicate the completion percentage of an operation or process. We can categorize progress bar as determinate progress bar and indeterminate progress bar.
+
+Determinate progress bar should only be used in situations where the system can accurately update the current status. A determinate progress bar should never fill from left to right, then loop back to empty for a single process.
+
+If the actual status cannot be calculated, an indeterminate progress bar should be used to provide user feedback.
+
+jQueryUI provides an easy-to-use progress bar widget that we can use to let users know that our application is hard at work performing the requested operation. jQueryUI provides progressbar() method to create progress bars.
+
+Syntax
+The progressbar() method can be used in two forms:
+
+$(selector, context).progressbar (options) Method
+
+$(selector, context).progressbar ("action", params) Method
+
+$(selector, context).progressbar (options) Method
+The progressbar (options) method declares that an HTML element can be managed in the form of a progress bar. The options parameter is an object that specifies the appearance and behavior of progress bars.
+
+Syntax
+$(selector, context).progressbar (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows:
+
+$(selector, context).progressbar({option1: value1, option2: value2..... });
+Following table lists the different options that can be used with this method:
+
+Option  Description
+disabled    
+This option when set to true disables the progress bars. By default its value is false.
+
+max 
+This option sets the maximum value for a progress bar. By default its value is 100.
+
+value   
+This option specifies the initial value of the progress bar. By default its value is 0.
+
+Following section will show you few working examples of progressbar functionality.
+
+Default Functionality
+The following example demonstrates a simple example of progressbar functionality, passing no parameters to the progressbar() method .
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>jQuery UI ProgressBar functionality</title>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+         .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+         }
+      </style>
+      <script>
+         $(function() {
+            $( "#progressbar-1" ).progressbar({
+               value: 30
+            });
+         });
+      </script>
+   </head>
+   <body> 
+      <div id="progressbar-1"></div> 
+   </body>
+</html>
+Let's save above code in an HTML file progressbarexample.htm and open it in a standard browser which supports javascript, you must see the following output. Now you can play with the result:
+
+This example shows the creation of progress bar using of progressbar() method. This is a default determinate progress bar.
+
+Use of max and value
+The following example demonstrates the usage of two options values and max in the progressbar function of JqueryUI.
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>jQuery UI ProgressBar functionality</title>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+         .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+         }
+      </style>
+      <script>
+         $(function() {
+            var progressbar = $( "#progressbar-2" );
+               $( "#progressbar-2" ).progressbar({
+                  value: 30,
+                  max:300
+               });
+            function progress() {
+            var val = progressbar.progressbar( "value" ) || 0;
+            progressbar.progressbar( "value", val + 1 );
+            if ( val < 99 ) {
+               setTimeout( progress, 100 );
+            }
+         }
+         setTimeout( progress, 3000 );
+      });
+   </script>
+   </head>
+   <body>
+      <div id="progressbar-2"></div>
+   </body>
+</html>
+Let's save above code in an HTML file progressbarexample.htm and open it in a standard browser which supports javascript, you must see the following output. Now you can play with the result:
+
+Here you can see that the progress bar fills from right to left and stops when the value reaches 300.
+
+$(selector, context).progressbar ("action", params) Method
+The progressbar ("action", params) method can perform an action on progress bar, such as changing the percentage filled. The action is specified as a string in the first argument (e.g., "value" to change the percentage filled). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).progressbar ("action", params);;
+Following table lists the different actions that can be used with this method:
+
+Action  Description
+destroy 
+This action removes the progress bar functionality of an element completely. The elements return to their pre-init state. This method does not accept any arguments.
+
+destroy 
+This action removes the progress bar functionality of an element completely. The elements return to their pre-init state. This method does not accept any arguments.
+
+disable 
+This action disables the progress bar functionality of an element. This method does not accept any arguments.
+
+enable  
+This action enables the progress bar functionality. This method does not accept any arguments.
+
+option( optionName )    
+This action retrieves the value currently associated with specified optionName. Where optionName is a String.
+
+option  
+This action gets an object containing key/value pairs representing the current progressbar options hash. This method does not accept any arguments.
+
+option( optionName, value ) 
+This action sets the value of the progressbar option associated with the specified optionName.
+
+option( options )   
+This action sets one or more options for the progress bars. The argument options is a map of option-value pairs to be set.
+
+value   
+This action retrieves the current value of options.value, that is, the percentage of fill in the progress bar.
+
+value( value )  
+This action specifies a new value to the percentage filled in the progress bar. The argument value can be a Number or Boolean.
+
+widget  
+This action returns a jQuery object containing the progressbar. This method does not accept any arguments.
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of disable() and option( optionName, value ) methods.
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>jQuery UI ProgressBar functionality</title>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+         .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+         }
+      </style>
+      <script>
+         $(function() {
+            $( "#progressbar-3" ).progressbar({
+               value: 30
+            });
+            $( "#progressbar-3" ).progressbar('disable');
+            $( "#progressbar-4" ).progressbar({
+               value: 30
+            });
+            var progressbar = $( "#progressbar-4" );
+            $( "#progressbar-4" ).progressbar( "option", "max", 1024 );
+            function progress() {
+               var val = progressbar.progressbar( "value" ) || 0;
+               progressbar.progressbar( "value", val + 1 );
+               if ( val < 99 ) {
+                  setTimeout( progress, 100 );
+               }
+            }
+            setTimeout( progress, 3000 );
+         });
+      </script>
+   </head>
+   <body>
+      <h3>Disabled Progressbar</h3>
+      <div id="progressbar-3"></div><br>
+      <h3>Progressbar with max value set</h3>
+      <div id="progressbar-4"></div>
+   </body>
+</html>
+Let's save above code in an HTML file progressbarexample.htm and open it in a standard browser which supports javascript, you must see the following output:
+
+DISABLED PROGRESS BAR
+
+PROGRESS BAR WITH MAX VALUE SET
+Event Management on progress bar elements
+In addition to the progressbar (options) method we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below:
+
+Event Method    Description
+change(event, ui)   
+This event is triggered whenever the value of progress bar changes. Where event is of type Event, and ui is of type Object.
+
+complete(event, ui) 
+This event is triggered when the progressbar reaches the maximumm value. Where event is of type Event, and ui is of type Object.
+
+create(event, ui)   
+This event is triggered whenever progressbar is created. Where event is of type Event, and ui is of type Object.
+
+Example
+The following example demonstrates the event method usage during progressbar functionality. This example demonstrates the use of events change and complete.
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>jQuery UI ProgressBar functionality</title>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+         .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+         }
+         .progress-label {
+            position: absolute;
+            left: 50%;
+            top: 13px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+         }
+      </style>
+      <script>
+      $(function() {
+         var progressbar = $( "#progressbar-5" );
+         progressLabel = $( ".progress-label" );
+         $( "#progressbar-5" ).progressbar({
+            value: false,
+            change: function() {
+               progressLabel.text( 
+                  progressbar.progressbar( "value" ) + "%" );
+            },
+            complete: function() {
+               progressLabel.text( "Loading Completed!" );
+            }
+         });
+         function progress() {
+            var val = progressbar.progressbar( "value" ) || 0;
+            progressbar.progressbar( "value", val + 1 );
+            if ( val < 99 ) {
+               setTimeout( progress, 100 );
+            }
+         }
+         setTimeout( progress, 3000 );
+      });
+   </script>
+   </head>
+   <body>
+      <div id="progressbar-5">
+         <div class="progress-label">
+            Loading...
+         </div>
+      </div>
+   </body>
+</html>
+Let's save above code in an HTML file progressbarexample.htm and open it in a standard browser which supports javascript, you must see the following output:
+
+Here you can see as the progressbar changes its changed value is printed and upon complete event the "Loading Completed!" message displays.
+
+Loading Completed!
+ Previous Page  Print  PDF Next Page  
+Advertisements
+ img  img  img  img  img  img
+ Tutorials Point
+Write for us FAQ's Helping Contact
+© Copyright 2016. All Rights Reserved.
+
+Enter email for newsletter
+  go

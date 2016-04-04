@@ -5,20 +5,46 @@
     // Variables
     var placeholderTime = 500;
 
+    var loadingSpeed = 1; //variable*100 milliseconds
+
+
     $(".folder-icons a").click(function(evt){
         evt.preventDefault();
         $(".loading-module").show();
-
-        setTimeout(function() {
-           $(".loading-module").hide();
-           $(".view-module-wrapper").show(); 
-        }, placeholderTime);
+        $( "#progressbar" ).progressbar({
+            value: false,
+            complete: function() {
+                $(".loading-module").hide();
+                $(".view-module-wrapper").show();
+            }
+        });
+        progress();
     });
+
+    function progress() {
+        var val = $( "#progressbar" ).progressbar( "value" ) || 0;
+        $( "#progressbar" ).progressbar( "value", val + 1 );
+        if ( val < 99 ) {
+           setTimeout( progress, loadingSpeed );
+        }
+     }
+     
 
     $(".view-module .compile-link").click(function(evt) {
         evt.preventDefault();
         //$(".view-module-wrapper").hide(); 
         $(".compiled-module-wrapper").show(); 
+        //$( ".slider" ).slider();
+        $(".slider" ).slider({
+            range: "min",
+            min: 0,
+            max: 360,
+            animate: true,
+            slide: function(event, ui) {
+                $(".rotate-one .value").html(ui.value);
+            }
+        });
+        $(".rotate-one .value").html($(".slider").slider("value"));
     });
 
     $(".compiled-module .create").click(function(evt) {
