@@ -81,6 +81,14 @@ nav a {
     h2 {
         font-size: 12px;
     }
+    p.grey {
+        color: #9B9B9B;
+        font-size: 8px;
+    }
+    #countdown {
+        font-size: 24px;
+        color: #F4AB2C;
+    }
 /* *** */
 
 /* Buttons */
@@ -107,7 +115,7 @@ nav a {
         border-radius: 50%;
         width: 63px;
         height: 63px;
-        border: 10px solid #EFEDED;
+        border: 5px solid #EFEDED;
         background-color: grey;
         margin: 0 auto;
     }
@@ -291,6 +299,10 @@ nav a {
         color: white;
     }
 
+    .slider.ui-slider {
+
+    }
+
 /* Create Module */
 
     .create-module-wrapper {
@@ -317,6 +329,8 @@ nav a {
         .create-module .tools a p {
             color: #4A4A4A;
         }
+
+
 
 
 /* Printing Steps */
@@ -414,6 +428,23 @@ nav a {
     .print-dropdown select {
         width: 184px;
     }
+
+    #printingprogress {
+        border-radius: 50%;
+        width: 63px;
+        height: 63px;
+        border: 5px solid #EFEDED;
+        background-color: #EFEDED;
+        margin: 0 auto;
+        transform: rotate(-90deg);
+    }
+    #printingprogress .ui-progressbar-value {
+        border: none;
+        height: calc(100% + 10px);
+    }
+    // #printingprogress .ui-progressbar .ui-progressbar-value {
+    //     height: calc(100% + 10px);
+    // }
 
     .ready .box {
         padding: 20px;

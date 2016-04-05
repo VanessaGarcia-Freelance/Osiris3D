@@ -143,15 +143,22 @@
         <div class="steps-modules">
             <div class="print-dropdown active module">
               <h2>Select a printer</h2>
-              <select>
-                <option selected>Select Device</option>
+              <select class="selectmenu">
+                <option disabled selected>Select Device</option>
                 <option>Titanium</option>
                 <option>PLA Printer</option>
               </select>
               <button class="orange">Print</button>
             </div>
             <div class="printing module">
-                Print Animation
+                <div class="load-bar-container">
+                  <div class="progress-container">
+                    <div id="printingprogress"></div>
+                    <h2>Printing...</h2>
+                    <p class="grey">Estimated Time:</p>
+                    <div id="countdown"></div>
+                  </div>
+                </div>
             </div>
             <div class="print-complete module">
               <div class="circle-check orange"></div>
