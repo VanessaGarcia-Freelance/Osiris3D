@@ -156,7 +156,7 @@
                     <div id="printingprogress"></div>
                     <h2>Printing...</h2>
                     <p class="grey">Estimated Time:</p>
-                    <div id="countdown"></div>
+                    <div id="countdown" class="countdown"></div>
                   </div>
                 </div>
             </div>
@@ -167,10 +167,24 @@
               <button class="grey">OK</button>
             </div>
             <div class="scanning module">
-              Scan Animation
+              <div class="scan-container">
+                <div class="progress-container">
+                  <div id="scanningprogress"></div>
+                </div>
+                <h2>Scanning...</h2>
+                <p class="grey">Estimated Time:</p>
+                <div id="countdownScan" class="countdown blue"></div>
+              </div>
             </div>
             <div class="verifing module">
-              Verify Animation
+              <div class="scan-container">
+                <div class="progress-container">
+                  <div id="verifyingprogress"></div>
+                </div>
+                <h2>Verifying...</h2>
+                <p class="grey">Estimated Time:</p>
+                <div id="countdownVerify" class="countdown blue"></div>
+              </div>
             </div>
             <div class="verify-complete module">
               <div class="circle-check blue"></div>
@@ -179,7 +193,10 @@
               <button class="grey">OK</button>
             </div>
             <div class="sterilizing module">
-              Sterilizing Animation
+              <div class="circle-check sterilize-circle"></div>
+              <h2>Sterilizing...</h2>
+              <p class="grey">Estimated Time:</p>
+              <div id="countdownSterilize" class="countdown"></div>
             </div>
             <div class="ready module">
               <div class="box">

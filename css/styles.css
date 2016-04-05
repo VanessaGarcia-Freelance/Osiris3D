@@ -84,10 +84,14 @@ nav a {
     p.grey {
         color: #9B9B9B;
         font-size: 8px;
+        margin-bottom: 0px;
     }
-    #countdown {
+    .countdown {
         font-size: 24px;
         color: #F4AB2C;
+    }
+    .countdown.blue {
+        color: #6EB4DB;
     }
 /* *** */
 
@@ -442,9 +446,73 @@ nav a {
         border: none;
         height: calc(100% + 10px);
     }
-    // #printingprogress .ui-progressbar .ui-progressbar-value {
-    //     height: calc(100% + 10px);
-    // }
+
+    .scan-container .progress-container {
+        transform: rotate(90deg);
+        height: 216px;
+        width: 125px;
+        margin-top: -55px;
+        margin-left: 37px;
+        margin-bottom: -49px;
+    }
+    #scanningprogress {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: #CDCDCD;
+        background: -webkit-linear-gradient(left, white, #CDCDCD); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(left, white, #CDCDCD); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(left, white, #CDCDCD); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(left, white, #CDCDCD); /* Standard syntax */
+    }
+
+    #scanningprogress .ui-progressbar-value {
+        // background-color: transparent;
+        border: none;
+        background: url("../images/fracture.png") 0px center no-repeat;
+        // background-size: 85px;
+    }
+
+     #verifyingprogress {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: #CDCDCD;
+        background: url("../images/fracture.png") 0px center no-repeat;
+
+        background: url("../images/fracture.png"), -webkit-linear-gradient(left, white, #CDCDCD); /* For Safari 5.1 to 6.0 */
+        background: url("../images/fracture.png"), -o-linear-gradient(left, white, #CDCDCD); /* For Opera 11.1 to 12.0 */
+        background: url("../images/fracture.png"), -moz-linear-gradient(left, white, #CDCDCD); /* For Firefox 3.6 to 15 */
+        background: url("../images/fracture.png"), linear-gradient(left, white, #CDCDCD); /* Standard syntax */
+
+        background-position: 0px center;
+        background-repeat: no-repeat;
+        // background-size: 85px;
+    }
+    #verifyingprogress .ui-progressbar-value {
+        border: none;
+        background-color: white;
+        background: -webkit-linear-gradient(right, white, transparent); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, white, transparent); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, white, transparent); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(right, white, transparent); /* Standard syntax */
+    }
+
+    .sterilize-circle {
+        background: #EFEDED url(../images/spinning-circle.png);
+        background-size: contain;
+        -webkit-animation-name:             rotate; 
+        -webkit-animation-duration:         5s; 
+        -webkit-animation-iteration-count:  infinite;
+        -webkit-animation-timing-function: linear;
+    }
+    .sterilize-circle:after{
+        content: '';
+        
+
+    }
 
     .ready .box {
         padding: 20px;
@@ -468,6 +536,14 @@ nav a {
 
 
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
 
 
 
