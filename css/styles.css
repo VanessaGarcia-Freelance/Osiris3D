@@ -1,6 +1,33 @@
+
+/* BEGIN Regular */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/Regular/OpenSans-Regular.eot?v=1.1.0");
+  src: url("../fonts/Regular/OpenSans-Regular.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("../fonts/Regular/OpenSans-Regular.woff2?v=1.1.0") format("woff2"), url("../fonts/Regular/OpenSans-Regular.woff?v=1.1.0") format("woff"), url("../fonts/Regular/OpenSans-Regular.ttf?v=1.1.0") format("truetype"), url("../fonts/Regular/OpenSans-Regular.svg?v=1.1.0#Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* END Regular */
+/* BEGIN Semibold */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/Semibold/OpenSans-Semibold.eot?v=1.1.0");
+  src: url("../fonts/Semibold/OpenSans-Semibold.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("../fonts/Semibold/OpenSans-Semibold.woff2?v=1.1.0") format("woff2"), url("../fonts/Semibold/OpenSans-Semibold.woff?v=1.1.0") format("woff"), url("../fonts/Semibold/OpenSans-Semibold.ttf?v=1.1.0") format("truetype"), url("../fonts/Semibold/OpenSans-Semibold.svg?v=1.1.0#Semibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+/* END Semibold */
+/* BEGIN Bold */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/Bold/OpenSans-Bold.eot?v=1.1.0");
+  src: url("../fonts/Bold/OpenSans-Bold.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("../fonts/Bold/OpenSans-Bold.woff2?v=1.1.0") format("woff2"), url("../fonts/Bold/OpenSans-Bold.woff?v=1.1.0") format("woff"), url("../fonts/Bold/OpenSans-Bold.ttf?v=1.1.0") format("truetype"), url("../fonts/Bold/OpenSans-Bold.svg?v=1.1.0#Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+/* END Bold */
+
+
 body {
     margin: 0;
-    font-family: Arial; //need to update this
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 a {
@@ -80,6 +107,7 @@ nav a {
 /* Headers */
     h2 {
         font-size: 12px;
+        font-weight: 600;
     }
     p.grey {
         color: #9B9B9B;
@@ -89,6 +117,7 @@ nav a {
     .countdown {
         font-size: 24px;
         color: #F4AB2C;
+        font-weight: 600;
     }
     .countdown.blue {
         color: #6EB4DB;
@@ -106,6 +135,7 @@ nav a {
         color: white;
         margin: 15px auto 0 auto;
         cursor: pointer;
+        font-weight: 600;
     }
     button.orange {
         background-color: #F4AB2C;
@@ -184,6 +214,7 @@ nav a {
             text-align: center;
             margin: 0;
             color: #4A4A4A;
+            font-weight: 600;
         }
         .folder-icons .folder-link:hover img {
             background-color: #7A7A7A;
@@ -272,6 +303,7 @@ nav a {
                 margin-top: 7px;
                 margin-bottom: 0;
                 font-size: 11px;
+                font-weight: 600;
             }
     
 /* Compiled Module (3D Skull Rotator) */
@@ -301,6 +333,7 @@ nav a {
 
     .compiled-module .tools a p {
         color: white;
+        font-weight: 600;
     }
 
     .slider.ui-slider {
@@ -332,6 +365,7 @@ nav a {
 
         .create-module .tools a p {
             color: #4A4A4A;
+            font-weight: 600;
         }
 
 
@@ -524,6 +558,7 @@ nav a {
 
     .ready .buttons a p {
         color: #929295;
+        font-weight: 600;
     }
     .ready .buttons a:first-child {
         float: left;
