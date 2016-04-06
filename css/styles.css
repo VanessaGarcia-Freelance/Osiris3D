@@ -290,7 +290,27 @@ nav a {
     .compiled-module .skulls {
         position: absolute;
         top: 110px;
+        cursor: ew-resize;
         left: 150px;
+    }
+
+
+    .compiled-module .skulls #product{
+        width: 360px;
+        height: 700px;
+        position: absolute;
+        top: 0px;
+        left:-40px;
+        cursor: ew-resize;
+    }
+    #view-overlay{
+        cursor: ew-resize;
+        
+    }
+
+    .compiled-module .skulls #product img{ 
+        width: 100%; 
+        cursor: ew-resize;
     }
 
     .compiled-module .tools {
