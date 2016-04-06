@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Insta Implantz</title>
+  <meta name="description" content="Osiris 3D"> 
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+
+  <div>
+    <img src="images/rotator/swp1.png" id="imagereplace" width="450" height="450"/>
+  </div>
+
+  <script src="js/jquery-1.12.2.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/j360.js"></script>
+  <script src="js/jquery.threesixty.js"></script>
+  <script src="js/functions.js"></script>
+           <script language="javascript">
+$(function() {
+
+  //l'array ARR va contenir la liste des images
+  var arr = [];
+  //trop lazy pour tout taper... 
+  for (var x=1; x<= 51; x++)
+    arr.push("images/rotator/swp" +x + ".png"); 
+  
+  //bindons le widget rotate � l'image pic avec la liste d'image arr
+  $("#imagereplace").threesixty({images:arr, method:'click', 'cycle':3, direction:"backward"}); 
+
+});
+
+</script>
+</body>
+</html>

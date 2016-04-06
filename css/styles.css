@@ -315,7 +315,7 @@ nav a {
         height: 500px;
         margin: 0 auto;
         background:  url('../images/compiled-view.png') center no-repeat;
-        overflow: auto;
+        overflow: hidden;
         position: relative;
     }
 
@@ -328,21 +328,52 @@ nav a {
 
 
     .compiled-module .skulls #product{
-        width: 360px;
+        width: 570px;
         height: 700px;
         position: absolute;
-        top: 0px;
+        top: -30px;
         left:-40px;
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none;   /* Chrome/Safari/Opera */
+          -khtml-user-select: none;    /* Konqueror */
+          -moz-user-select: none;      /* Firefox */
+          -ms-user-select: none;       /* IE/Edge */
+          user-select: none;  
         cursor: ew-resize;
     }
-    #view-overlay{
+    .fracture #productb{
+        width: 400px;
+        height: 400px; 
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none;   /* Chrome/Safari/Opera */
+          -khtml-user-select: none;    /* Konqueror */
+          -moz-user-select: none;      /* Firefox */
+          -ms-user-select: none;       /* IE/Edge */
+          user-select: none;  
         cursor: ew-resize;
+    }
+    .compiled-module .skulls #view_overlay{
+        cursor: ew-resize;
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none;   /* Chrome/Safari/Opera */
+          -khtml-user-select: none;    /* Konqueror */
+          -moz-user-select: none;      /* Firefox */
+          -ms-user-select: none;       /* IE/Edge */
+          user-select: none;   
+          width: 570px;
         
     }
 
-    .compiled-module .skulls #product img{ 
-        width: 100%; 
-        cursor: ew-resize;
+    .compiled-module .skulls #product img,
+    .fracture #productb img{ 
+        width: 100%;  
+        pointer-events: none;
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none;   /* Chrome/Safari/Opera */
+          -khtml-user-select: none;    /* Konqueror */
+          -moz-user-select: none;      /* Firefox */
+          -ms-user-select: none;       /* IE/Edge */
+          user-select: none;  
     }
 
     .compiled-module .tools {
@@ -374,8 +405,8 @@ nav a {
         }
         .create-module .fracture {
             position: absolute;
-            top: 158px;
-            left: 160px;
+            top: 85px;
+            left: 85px;
         }
         .create-module .tools {
             position: absolute;

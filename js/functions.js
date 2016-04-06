@@ -1,6 +1,15 @@
-$(document).ready(function() {
-        $('#product').j360(); 
+$(document).ready(function() { 
+        $('#product').j360();  
+        $('img').on('dragstart', function(event) { event.preventDefault(); });
+        $("img").mousedown(function(){
+            return false;
+        });
+
+
+ 
+
     });
+ 
 
 (function($) { 
 
@@ -124,7 +133,7 @@ $(document).ready(function() {
     //STEP 3: Show 3d view of new skull piece
     $(".compiled-module .create").click(function(evt) {
         evt.preventDefault();
-        $(".create-module-wrapper").show(); 
+        $(".create-module-wrapper").show();  
     });
 
     // STEP 4a: Print Module, select Printer Dropdown
@@ -197,6 +206,3 @@ $(document).ready(function() {
 
 
 })(jQuery);
-
-
-    

@@ -15,7 +15,7 @@
     $.fn.j360 = function(options) {
         var defaults = {
             clicked: false,
-            currImg: 1
+            currImg: 2
         }
         var options = jQuery.extend(defaults, options);
         return this.each(function() {
