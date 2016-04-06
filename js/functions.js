@@ -1,3 +1,7 @@
+$(document).ready(function() {
+        $('#product').j360(); 
+    });
+
 (function($) { 
 
     console.log('the beginning');
@@ -193,3 +197,6 @@
 
 
 })(jQuery);
+
+
+    
