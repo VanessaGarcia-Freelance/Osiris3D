@@ -5,7 +5,6 @@ $(document).ready(function() {
             return false;
         });
 
-
  
 
     });
@@ -21,16 +20,16 @@ $(document).ready(function() {
     var loadingSpeed = 1; //variable*100 milliseconds
     
     var printMin = 0; //amount of minutes printing will take
-    var printSec = 1; //amount of seconds (minus the min) printing will take
+    var printSec = 30; //amount of seconds (minus the min) printing will take
     
     var scanMin = 0;
-    var scanSec = 2;
+    var scanSec = 30;
 
     var verifyMin = 0;
-    var verifySec = 2;
+    var verifySec = 10;
 
     var sterilizeMin = 0;
-    var sterilizeSec = 2;
+    var sterilizeSec = 30;
 
 
     //grabs amount of milliseconds total from the printing minutes and seconds vars provided. Do Not Adjust This Var 
