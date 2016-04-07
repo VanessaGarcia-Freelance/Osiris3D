@@ -50,7 +50,7 @@ jQuery.fn.threesixty = function(options){
 		overlay.mousedown(function(e) { e.preventDefault(); e.stopPropagation(); });
 
 		parent.append(overlay).append(progressBg).append(progressBar);
-		pic.css({cursor:"all-scroll"});
+		pic.css({cursor:"ew-resize"});
 		
 
 		var totalProgress = 0;

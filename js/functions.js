@@ -1,7 +1,7 @@
 $(document).ready(function() { 
         $('#product').j360();  
         $('img').on('dragstart', function(event) { event.preventDefault(); });
-        $("img").mousedown(function(){
+        $(".img").mousedown(function(){
             return false;
         });
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     //var loadingSpeed = 1; //variable*100 milliseconds
     
-    var printMin = printMin; //amount of minutes printing will take
+    /*var printMin = printMin; //amount of minutes printing will take
     var printSec = printSec; //amount of seconds (minus the min) printing will take
     
     var scanMin = scanMin;
@@ -30,7 +30,7 @@ $(document).ready(function() {
     var verifySec = verifySec;
 
     var sterilizeMin = sterilizeMin;
-    var sterilizeSec = sterilizeSec; 
+    var sterilizeSec = sterilizeSec; */
 
     //grabs amount of milliseconds total from the printing minutes and seconds vars provided. Do Not Adjust This Var 
     var printingMill = ((printMin * 60000) + (printSec * 1000)) / 100;
