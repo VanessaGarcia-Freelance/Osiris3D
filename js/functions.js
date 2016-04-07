@@ -15,6 +15,8 @@ $(document).ready(function() {
     console.log('the beginning');
 
     // Variables
+
+    /* moved to timing_variables.js
     var placeholderTime = 500;
 
     var loadingSpeed = 1; //variable*100 milliseconds
@@ -30,7 +32,7 @@ $(document).ready(function() {
 
     var sterilizeMin = 0;
     var sterilizeSec = 30;
-
+    */
 
     //grabs amount of milliseconds total from the printing minutes and seconds vars provided. Do Not Adjust This Var 
     var printingMill = ((printMin * 60000) + (printSec * 1000)) / 100;

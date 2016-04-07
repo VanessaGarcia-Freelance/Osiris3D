@@ -19,7 +19,7 @@
 
 
   <div>
-    <img src="images/rotator/swp1.png" id="imagereplace" width="450" height="450"/>
+    <img src="images/rotator/pm_1.png" id="imagereplace" width="475" height="330"/>
   </div>
 
   <script src="js/jquery-1.12.2.min.js"></script>
@@ -33,8 +33,8 @@ $(function() {
   //l'array ARR va contenir la liste des images
   var arr = [];
   //trop lazy pour tout taper... 
-  for (var x=1; x<= 51; x++)
-    arr.push("images/rotator/swp" +x + ".png"); 
+  for (var x=1; x<= 37; x++)
+    arr.push("images/rotator/pm_" +x + ".png"); 
   
   //bindons le widget rotate � l'image pic avec la liste d'image arr
   $("#imagereplace").threesixty({images:arr, method:'click', 'cycle':3, direction:"backward"}); 
