@@ -51,6 +51,10 @@ header {
     // flaot: left;
 }
 
+.logo img{
+    max-width: 227px;
+}
+
 nav {
     display: block;
     position: absolute;
@@ -62,6 +66,7 @@ nav a {
     padding: 10px 10px;
     display: block;
     float: left;
+    font-size: 12px;
 }
 
 .main-content {
@@ -79,6 +84,14 @@ nav a {
         box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.18);
         border-radius: 5px;
         //border: 1px solid #BFBFBF;
+    }
+    #right-skulls{
+        position: absolute;
+        right: 0px;
+        top: 84px;
+    }
+    #right-skulls img{
+        max-width: 266px;
     }
 /* *** */
 
@@ -484,11 +497,15 @@ nav a {
 
     }
 
-    .steps-list li.blue.active:before {
+    .steps-list li.blue.active:before,
+    .steps-list li.green.active:before {
         color: #6EB4DB;
     }
     .steps-list li.blue.done:before {
         color: #6EB4DB;
+    }
+    .steps-list li.green.done:before {
+        color: #B8E986;
     }
 
     .steps-modules {

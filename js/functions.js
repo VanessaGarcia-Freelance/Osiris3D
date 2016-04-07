@@ -12,27 +12,25 @@ $(document).ready(function() {
 
 (function($) { 
 
-    console.log('the beginning');
+    //console.log('the beginning');
 
     // Variables
+ 
+    //var placeholderTime = 500;
 
-    /* moved to timing_variables.js
-    var placeholderTime = 500;
-
-    var loadingSpeed = 1; //variable*100 milliseconds
+    //var loadingSpeed = 1; //variable*100 milliseconds
     
-    var printMin = 0; //amount of minutes printing will take
-    var printSec = 30; //amount of seconds (minus the min) printing will take
+    var printMin = printMin; //amount of minutes printing will take
+    var printSec = printSec; //amount of seconds (minus the min) printing will take
     
-    var scanMin = 0;
-    var scanSec = 30;
+    var scanMin = scanMin;
+    var scanSec = scanSec;
 
-    var verifyMin = 0;
-    var verifySec = 10;
+    var verifyMin = verifyMin;
+    var verifySec = verifySec;
 
-    var sterilizeMin = 0;
-    var sterilizeSec = 30;
-    */
+    var sterilizeMin = sterilizeMin;
+    var sterilizeSec = sterilizeSec; 
 
     //grabs amount of milliseconds total from the printing minutes and seconds vars provided. Do Not Adjust This Var 
     var printingMill = ((printMin * 60000) + (printSec * 1000)) / 100;
@@ -43,7 +41,7 @@ $(document).ready(function() {
 
 
     //STEP 1: Click the folder icons to start application
-    $(".folder-icons a").click(function(evt){
+    $(".folder-icons a.launch").click(function(evt){
         evt.preventDefault();
         $(".loading-module").show();
         //load progress bar
@@ -203,6 +201,15 @@ $(document).ready(function() {
         $(".print-steps .sterilizing").show();
 
         countdown( "countdownSterilize", sterilizeMin, sterilizeSec );
+    });
+    $(".modify-implant").click(function(evt) {
+        evt.preventDefault(); 
+
+        $(".print-steps-wrapper").fadeOut(); 
+        $(".steps-list .sterilize").removeClass('active');
+        $(".print-steps .print-dropdown").addClass('active');
+        $(".print-steps .print-dropdown").fadeIn();
+        $(".print-steps .ready").fadeOut();
     });
 
 
