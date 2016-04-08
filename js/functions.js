@@ -126,6 +126,7 @@ $(document).ready(function() {
     //STEP 2: Show Compiled 3D View of Skull
     $(".view-module .compile-link").click(function(evt) {
         evt.preventDefault();
+        $(".view-module-wrapper").hide();
         $(".compiled-module-wrapper").show(); 
     });
 
@@ -133,6 +134,8 @@ $(document).ready(function() {
     $(".compiled-module .create").click(function(evt) {
         evt.preventDefault();
         $(".create-module-wrapper").show();  
+        $('#news-link').data('backstep',".view-module .compile-link");
+        $('#news-link').data('removeprint',"y");
     });
 
     // STEP 4a: Print Module, select Printer Dropdown
@@ -140,6 +143,8 @@ $(document).ready(function() {
         evt.preventDefault();
         $( ".selectmenu" ).selectmenu();
         $(".print-steps-wrapper").show(); 
+        $('#news-link').data('backstep',".compiled-module .create");
+        $('#news-link').data('removeprint',"y");
     });
 
     //STEP 4b: Show Printing Progress 
@@ -156,12 +161,12 @@ $(document).ready(function() {
             }
         });
         countdown( "countdown", printMin, printSec );
-        printprogress();
+        printprogress(); 
 
     });
 
     $(".print-steps .print-complete button").click(function(evt) {
-        evt.preventDefault();
+        evt.preventDefault(); 
         $(".steps-list .print").removeClass('active').addClass('done');
         $(".steps-list .scan").addClass('active');
 
@@ -189,11 +194,11 @@ $(document).ready(function() {
             }
         });
         countdown( "countdownScan", scanMin, scanSec );
-        scanprogress();
+        scanprogress(); 
     });
 
     $(".print-steps .verify-complete button").click(function(evt) {
-        evt.preventDefault();
+        evt.preventDefault(); 
         $(".steps-list .verify").removeClass('active').addClass('done');
         $(".steps-list .sterilize").addClass('active');
 
@@ -204,13 +209,55 @@ $(document).ready(function() {
     });
     $(".modify-implant").click(function(evt) {
         evt.preventDefault(); 
-
+ 
         $(".print-steps-wrapper").fadeOut(); 
-        $(".steps-list .sterilize").removeClass('active');
+        $(".steps-list li").removeClass('active');
+        $(".steps-list li").removeClass('done'); 
         $(".print-steps .print-dropdown").addClass('active');
         $(".print-steps .print-dropdown").fadeIn();
         $(".print-steps .ready").fadeOut();
     });
 
+    $("#home-link").click(function(evt) {
+        evt.preventDefault();  
+        $('.view-module-wrapper').fadeOut();
+        $(".compiled-module-wrapper").fadeOut(); 
+        $(".create-module-wrapper").fadeOut();  
+        $(".print-steps-wrapper").fadeOut(); 
+        $(".steps-list .sterilize").removeClass('active');
+        $(".steps-list li").removeClass('done'); 
+        $(".print-steps .print-dropdown").addClass('active');
+        $(".print-steps .print-dropdown").fadeIn();
+        $(".print-steps .ready").fadeOut();
+        $('#news-link').data('backstep',".folder-icons a.launch");
+    });
+
+    $("#main-screen-link").click(function(evt) {
+        evt.preventDefault();  
+        $("#home-link").click();
+    });
+    $(".help-icon").click(function(evt) {
+        evt.preventDefault();  
+        $(".application-wrapper").toggleClass('show-help');
+    });
+
+    $("#news-link").click(function(evt) {
+        evt.preventDefault();  
+        $('.view-module-wrapper').hide();
+        $(".compiled-module-wrapper").hide(); 
+            $(".create-module-wrapper").hide(); 
+        var golink = $(this).data('backstep'); 
+        if($(this).data('removeprint') == 'y'){ 
+            $(".print-steps-wrapper").fadeOut(); 
+            $(".steps-list li").removeClass('active'); 
+            $(".steps-list li").removeClass('done'); 
+            $(".print-steps .ready").fadeOut();
+            $('.steps-modules .module').hide();
+            $(".print-steps .print-dropdown").addClass('active');
+            $(".print-steps .print-dropdown").fadeIn();
+        } 
+        //alert(golink);
+        $(golink).click();
+    });
 
 })(jQuery);

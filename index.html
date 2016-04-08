@@ -7,9 +7,22 @@
   <title>Insta Implantz</title>
   <meta name="description" content="Osiris 3D">  
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="css/jquery-ui.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="./css/styles.css" type="text/css">
+  <link href="./css/jquery-ui.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="./images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" href="./images/manifest.json"> 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -17,11 +30,11 @@
 
 <body>
 <header>
-  <a href="#" class="logo"><img src="images/logo-white.png" /></a>
+  <a href="#" class="logo"><img src="./images/logo-white.png" /></a>
   <nav>
-    <a href="/css/">Home</a>
-    <a href="/css/">Contact</a>
-    <a href="/css/">News</a>
+    <a href="#" id="home-link">Home</a>
+    <a href="#">Contact</a>
+    <a href="#" id="news-link" data-backstep=".folder-icons a.launch" data-removeprint="y">News</a>
   </nav>
 </header>
 
@@ -32,15 +45,15 @@
     <!-- folder icons -->
     <div class="folder-icons">
       <a href="#" class="folder-link">
-        <img src="images/folder.png"/>
+        <img src="./images/folder.png"/>
         <p>J.Smith</p>
       </a>
       <a href="#" class="folder-link launch">
-        <img src="images/folder.png"/>
+        <img src="./images/folder.png"/>
         <p>S.Jones</p>
       </a>
       <a href="#" class="folder-link">
-        <img src="images/folder.png"/>
+        <img src="./images/folder.png"/>
         <p>M.Harris</p>
       </a>
     </div>
@@ -58,14 +71,13 @@
     <!-- viewer -->
     <div class="view-module-wrapper">
       <div class="view-module module-box">
+        <a class="help-icon"></a>
+        <div class="help-info"><img src="images/support-bubble.png" /></div>
         <div class="scroll-content">
-          <img src="images/skull-images.png" />
-          <img src="images/skull-images.png" /> 
-          <img src="images/skull-images.png" />  
-          <img src="images/skull-images-10more.png" /> 
+          <img src="./images/skull_images.png" /> 
         </div>
         <a href="#" class="compile-link">
-          <img src="images/3d-icon.png" />
+          <img src="./images/3d-icon.png" />
           <p>Compile 3D</p>
         </a>
       </div>
@@ -74,79 +86,81 @@
     <!-- compiled view -->
     <div class="compiled-module-wrapper">
       <div class="compiled-module module-box">
+        <a class="help-icon"></a>
+        <div class="help-info"><img src="images/support-bubble.png" /></div>
         <div class="skulls" class="rotator">
-         <!-- <img src="images/3d-skulls-placeholder.png" />-->
+         <!-- <img src="./images/3d-skulls-placeholder.png" />-->
 
             <div id="product" class="preventdrag"> 
-              <img src="images/rotator/swp1.png" draggable="false" /> 
-              <img src="images/rotator/swp2.png" draggable="false" /> 
-              <img src="images/rotator/swp3.png" draggable="false" /> 
-              <img src="images/rotator/swp4.png" draggable="false" /> 
-              <img src="images/rotator/swp5.png" draggable="false" /> 
-              <img src="images/rotator/swp6.png" draggable="false" /> 
-              <img src="images/rotator/swp7.png" draggable="false" /> 
-              <img src="images/rotator/swp8.png" draggable="false" /> 
-              <img src="images/rotator/swp9.png" draggable="false" /> 
-              <img src="images/rotator/swp10.png" draggable="false" /> 
-              <img src="images/rotator/swp11.png"  draggable="false"/> 
-              <img src="images/rotator/swp12.png" draggable="false" /> 
-              <img src="images/rotator/swp13.png" draggable="false" /> 
-              <img src="images/rotator/swp14.png" draggable="false" /> 
-              <img src="images/rotator/swp15.png" draggable="false" /> 
-              <img src="images/rotator/swp16.png" draggable="false" /> 
-              <img src="images/rotator/swp17.png" draggable="false" /> 
-              <img src="images/rotator/swp18.png" draggable="false" /> 
-              <img src="images/rotator/swp19.png" draggable="false" /> 
-              <img src="images/rotator/swp20.png" draggable="false" /> 
-              <img src="images/rotator/swp21.png" draggable="false" /> 
-              <img src="images/rotator/swp22.png"  draggable="false"/> 
-              <img src="images/rotator/swp23.png" draggable="false" /> 
-              <img src="images/rotator/swp24.png" draggable="false"/> 
-              <img src="images/rotator/swp25.png" draggable="false" /> 
-              <img src="images/rotator/swp26.png" draggable="false" /> 
-              <img src="images/rotator/swp27.png" draggable="false" /> 
-              <img src="images/rotator/swp28.png" draggable="false" /> 
-              <img src="images/rotator/swp29.png" draggable="false" /> 
-              <img src="images/rotator/swp30.png" draggable="false" /> 
-              <img src="images/rotator/swp31.png" draggable="false" /> 
-              <img src="images/rotator/swp32.png" draggable="false" /> 
-              <img src="images/rotator/swp33.png" draggable="false" /> 
-              <img src="images/rotator/swp34.png" draggable="false" /> 
-              <img src="images/rotator/swp35.png" draggable="false" /> 
-              <img src="images/rotator/swp36.png" draggable="false" /> 
-              <img src="images/rotator/swp37.png" draggable="false" /> 
-              <img src="images/rotator/swp38.png" draggable="false" /> 
-              <img src="images/rotator/swp39.png" draggable="false" /> 
-              <img src="images/rotator/swp40.png" draggable="false" /> 
-              <img src="images/rotator/swp41.png" draggable="false" /> 
-              <img src="images/rotator/swp42.png" draggable="false" /> 
-              <img src="images/rotator/swp43.png" draggable="false" /> 
-              <img src="images/rotator/swp44.png" draggable="false" /> 
-              <img src="images/rotator/swp45.png" draggable="false" /> 
-              <img src="images/rotator/swp46.png" draggable="false" /> 
-              <img src="images/rotator/swp47.png" draggable="false" /> 
-              <img src="images/rotator/swp48.png" draggable="false" /> 
-              <img src="images/rotator/swp49.png" draggable="false" /> 
-              <img src="images/rotator/swp50.png" draggable="false" /> 
-              <img src="images/rotator/swp51.png" draggable="false" /> 
+              <img src="./images/rotator/swp1.png" draggable="false" /> 
+              <img src="./images/rotator/swp2.png" draggable="false" /> 
+              <img src="./images/rotator/swp3.png" draggable="false" /> 
+              <img src="./images/rotator/swp4.png" draggable="false" /> 
+              <img src="./images/rotator/swp5.png" draggable="false" /> 
+              <img src="./images/rotator/swp6.png" draggable="false" /> 
+              <img src="./images/rotator/swp7.png" draggable="false" /> 
+              <img src="./images/rotator/swp8.png" draggable="false" /> 
+              <img src="./images/rotator/swp9.png" draggable="false" /> 
+              <img src="./images/rotator/swp10.png" draggable="false" /> 
+              <img src="./images/rotator/swp11.png"  draggable="false"/> 
+              <img src="./images/rotator/swp12.png" draggable="false" /> 
+              <img src="./images/rotator/swp13.png" draggable="false" /> 
+              <img src="./images/rotator/swp14.png" draggable="false" /> 
+              <img src="./images/rotator/swp15.png" draggable="false" /> 
+              <img src="./images/rotator/swp16.png" draggable="false" /> 
+              <img src="./images/rotator/swp17.png" draggable="false" /> 
+              <img src="./images/rotator/swp18.png" draggable="false" /> 
+              <img src="./images/rotator/swp19.png" draggable="false" /> 
+              <img src="./images/rotator/swp20.png" draggable="false" /> 
+              <img src="./images/rotator/swp21.png" draggable="false" /> 
+              <img src="./images/rotator/swp22.png"  draggable="false"/> 
+              <img src="./images/rotator/swp23.png" draggable="false" /> 
+              <img src="./images/rotator/swp24.png" draggable="false"/> 
+              <img src="./images/rotator/swp25.png" draggable="false" /> 
+              <img src="./images/rotator/swp26.png" draggable="false" /> 
+              <img src="./images/rotator/swp27.png" draggable="false" /> 
+              <img src="./images/rotator/swp28.png" draggable="false" /> 
+              <img src="./images/rotator/swp29.png" draggable="false" /> 
+              <img src="./images/rotator/swp30.png" draggable="false" /> 
+              <img src="./images/rotator/swp31.png" draggable="false" /> 
+              <img src="./images/rotator/swp32.png" draggable="false" /> 
+              <img src="./images/rotator/swp33.png" draggable="false" /> 
+              <img src="./images/rotator/swp34.png" draggable="false" /> 
+              <img src="./images/rotator/swp35.png" draggable="false" /> 
+              <img src="./images/rotator/swp36.png" draggable="false" /> 
+              <img src="./images/rotator/swp37.png" draggable="false" /> 
+              <img src="./images/rotator/swp38.png" draggable="false" /> 
+              <img src="./images/rotator/swp39.png" draggable="false" /> 
+              <img src="./images/rotator/swp40.png" draggable="false" /> 
+              <img src="./images/rotator/swp41.png" draggable="false" /> 
+              <img src="./images/rotator/swp42.png" draggable="false" /> 
+              <img src="./images/rotator/swp43.png" draggable="false" /> 
+              <img src="./images/rotator/swp44.png" draggable="false" /> 
+              <img src="./images/rotator/swp45.png" draggable="false" /> 
+              <img src="./images/rotator/swp46.png" draggable="false" /> 
+              <img src="./images/rotator/swp47.png" draggable="false" /> 
+              <img src="./images/rotator/swp48.png" draggable="false" /> 
+              <img src="./images/rotator/swp49.png" draggable="false" /> 
+              <img src="./images/rotator/swp50.png" draggable="false" /> 
+              <img src="./images/rotator/swp51.png" draggable="false" /> 
             </div>
 
         </div>
         <div class="tools">
           <a href="#" class="active">
-            <img src="images/rotate-button.png" />
+            <img src="./images/rotate-button.png" />
             <p>Rotate</p>
           </a>
           <a href="#" class="">
-            <img src="images/select-button.png" />
+            <img src="./images/select-button.png" />
             <p>Select</p>
           </a>
           <a href="#" class="">
-            <img src="images/cut-button.png" />
+            <img src="./images/cut-button.png" />
             <p>Cut</p>
           </a>
           <a href="#" class="blue create">
-            <img src="images/create-izi.png" />
+            <img src="./images/create-izi.png" />
             <p>Create<br/>IZI</p>
           </a>
         </div>
@@ -156,38 +170,40 @@
     <!-- fracture view -->
     <div class="create-module-wrapper">
       <div class="create-module module-box">
+        <a class="help-icon"></a>
+        <div class="help-info"><img src="images/support-bubble.png" /></div>
         <div class="fracture">
           
             <div id="productb" class="rotator"> 
-              <iframe src="part-rotate.html" width="450" height="450" frameBorder="0"></iframe>
+              <iframe src="part-rotate.html" width="450" height="450" frameBorder="0" scrolling="no"></iframe>
             </div>
 
         </div>
         <div class="tools">
           <a href="#" class="active">
-            <img src="images/rotate-button.png" />
+            <img src="./images/rotate-button.png" />
             <p>Rotate</p>
           </a>
           <a href="#" class="">
-            <img src="images/select-button.png" />
+            <img src="./images/select-button.png" />
             <p>Select</p>
           </a>
           <a href="#" class="">
-            <img src="images/cut-button.png" />
+            <img src="./images/cut-button.png" />
             <p>Cut</p>
           </a>
           <a href="#" class="blue">
-            <img src="images/save-button.png" />
+            <img src="./images/save-button.png" />
             <p>Save</p>
           </a>
           <a href="#" class="blue print">
-            <img src="images/print-izi.png" />
+            <img src="./images/print-izi.png" />
             <p>Print <br/> IZI</p>
           </a>
         </div>
 
         <div id="right-skulls">
-          <img src="images/new-skulls.png" />
+          <img src="./images/new-skulls.png" />
         </div>
       </div>
     </div>
@@ -209,8 +225,8 @@
               <h2>Select a printer</h2>
               <select class="selectmenu">
                 <option disabled selected>Select Device</option>
-                <option>Titanium</option>
-                <option>PLA Printer</option>
+                <option>Titanium Printer</option>
+                <option>ABS Printer</option>
               </select>
               <button class="orange">Print</button>
             </div>
@@ -268,12 +284,12 @@
                 <div class="circle-check green"></div>
               </div>
               <div class="buttons">
-                <a href="#">
-                  <img src="images/main-screen.png" />
+                <a href="#" id="main-screen-link">
+                  <img src="./images/main-screen.png" />
                   <p>Go to main screen</p>
                 </a>
                 <a href="#" class="modify-implant">
-                  <img src="images/modify-icon.png" />
+                  <img src="./images/modify-icon.png" />
                   <p>Modify implant</p>
                 </a>
               </div>
@@ -287,11 +303,11 @@
 
 </div>
 
-  <script src="js/jquery-1.12.2.min.js"></script>
-  <script src="js/jquery-ui.min.js"></script>
-  <script src="js/j360.js"></script> 
-  <script src="timing_variables.js"></script> 
-  <script src="js/functions.js"></script> 
+  <script src="./js/jquery-1.12.2.min.js"></script>
+  <script src="./js/jquery-ui.min.js"></script>
+  <script src="./js/j360.js"></script> 
+  <script src="./timing_variables.js"></script> 
+  <script src="./js/functions.js"></script> 
 </script>
 </body>
 </html>

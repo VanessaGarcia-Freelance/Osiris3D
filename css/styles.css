@@ -299,6 +299,7 @@ nav a {
                 margin: 0 auto;
                 display: block;
                 padding: 15px;
+                max-width: 689px;
             }  
             .scroll-content img:last-child {
                 padding-top: 0;
@@ -631,6 +632,7 @@ nav a {
     }
     .ready .buttons {
         margin-top: 10px;
+        cursor: pointer;
     }
 
     .ready .buttons a p {
@@ -646,6 +648,37 @@ nav a {
 
 
 
+    .help-icon{
+        /*background: url(../images/help-icon@2x.png) no-repeat center center;*/
+        background-size: contain;
+        height:28px;
+        width: 37px;
+        position: absolute;
+        right: 17px;
+        top:3px; 
+        cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+    }
+
+    .help-info{
+        width: 95px;
+        display: none;
+        position: absolute;
+        right: -1px;
+        top: 26px;
+    }
+    .help-info img{
+        width: 100%;
+    }
+    .show-help .help-info{
+        display: block;
+    }
 
 
 @-webkit-keyframes rotate {
